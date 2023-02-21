@@ -35,8 +35,45 @@
 /* The CSS for the store */
 .store_content {
  width: 84rem;
- margin-right: 40px;
+ margin: 18px 32px 54px 7px;
+ flex-direction: column;
+ padding: 48px 0 80px 0;
+ overflow: hidden;
+ background-color: #ececec;
+ position: relative;
 }
+
+.search_box {
+ width: 523px;
+ height: 98px;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ margin: 0 auto;
+}
+
+.search_title {
+ margin: 0 7px 13px 7px;
+ font-size: 15px;
+ color: #60695c;
+}
+
+.search_input {
+ width: 100%;
+ padding: 19px 7px 15px 32px;
+ position: relative;
+ overflow: hidden;
+ align-items: center;
+ font-size: 22px;
+ box-shadow: 0 0.4rem 1.6rem rgba(26, 31, 22, 0.150000006);
+ border-radius: 20px;
+ background-color: #ffffff;
+}
+
+.search_input::placeholder {
+ font-size: 19px;
+}
+
 
 /* The CSS for the bag */
 .bag {
