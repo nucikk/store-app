@@ -1,0 +1,44 @@
+/* The CSS for the navbar. */
+.dashboard {
+ width: 1920px;
+ height: 1080px;
+ background-color: #ececec;
+ position: relative;
+ overflow: hidden;
+ display: flex;
+}
+
+.navbar {
+ width: 72px;
+ height: 1080px;
+ background-color: #ffffff;
+ margin: 0 50px 0 10px;
+ border-radius: 10px;
+}
+
+.icon_list {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+
+.icon {
+ margin-top: 30px;
+}
+
+.icon:nth-child(5) {
+ margin-top: 660px;
+}
+
+
+/* The CSS for the store */
+.store_content {
+ width: 84rem;
+ margin-right: 40px;
+}
+
+/* The CSS for the bag */
+.bag {
+ width: 405px;
+}
