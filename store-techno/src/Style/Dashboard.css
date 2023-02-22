@@ -1,6 +1,5 @@
 /* The CSS for the navbar. */
 .dashboard {
- width: 1920px;
  height: 1080px;
  background-color: #ececec;
  position: relative;
@@ -35,7 +34,7 @@
 /* The CSS for the store */
 .store_content {
  width: 84rem;
- margin: 18px 32px 54px 7px;
+ margin: 0 32px 54px 7px;
  flex-direction: column;
  padding: 48px 0 80px 0;
  overflow: hidden;
@@ -73,6 +72,72 @@
 .search_input::placeholder {
  font-size: 19px;
 }
+
+.sale_continer {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 0 1px 51px 3px;
+ position: relative;
+ margin-top: 20px;;
+
+}
+
+.sale_section {
+ width: 100%;
+ align-items: center;
+ margin-bottom: 25px;
+ position: absolute;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.sale_item {
+ width: 223px;
+ position: relative;
+ flex-wrap: wrap;
+}
+
+.sale_item_img {
+ width: 100%;
+ border-radius: 30px;
+ background-color: #ffffff;
+}
+
+.sale_iten_title {
+ margin-top:10px;
+ font-size: 18px;
+ font-weight: 600;
+ color: #1A1F16;
+}
+.sale_item_box {
+ width: 180px;
+ display: flex;
+ align-items: center;
+ justify-content:space-between;
+ margin-left: 20px;
+}
+.sale_item_about {
+ font-size: 14px;
+ margin: 13px 0  13px 0;
+}
+
+.sale_item_price {
+ font-weight: bold;
+ font-size: 20px;
+}
+
+.section_second_container {
+width: 100%;
+position: relative;
+margin-top: 430px;
+display: flex;
+justify-content: space-between;
+}
+
+
 
 
 /* The CSS for the bag */
