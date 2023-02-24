@@ -50,11 +50,12 @@ const Productview = () => {
             </div>
 
           </div>
+          <div  className="product_details_view">
+            <p>
+              {product.details}
+            </p>
+          </div>
 
-          <p>Shop with confidence
-            Top Rated Plus
-            Trusted seller, fast shipping, and easy returns.
-          </p>
         </div>
         <div className="product_view_bag"></div>
       </div>

@@ -93,6 +93,15 @@
  font-weight:bold;
 }
 
+.product_details_view {
+ width: 90%;
+ padding: 20px 20px 10px 30px;
+ font-size: 23px;
+ line-height: 1.2;
+}
+
+
+
 .product_view_bag {
  width: 490px;
  height: 100%;
