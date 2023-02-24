@@ -12,9 +12,7 @@ const Dashboard = () => {
       <Navbar/>
       <div className="store_content">
       <Store />
-
       </div>
-
     </div>
   )
 }

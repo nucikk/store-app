@@ -2,10 +2,17 @@ import React, { useState } from 'react'
 import "../Style/Dashboard.css"
 import { productSectionOne } from '../Components/Product';
 import { productSectionSecond } from "../Components/Product"
+import { Link } from 'react-router-dom';
 
 const Store = () => {
   const [searchBar, setSearchBar] = useState('');
-
+  const [selectedProduct, setSelectedProduct] = useState(null)
+  
+  const handleProductClick = (productId) => {
+    const allProducts = [...productSectionOne, ...productSectionSecond];
+    const selectedProduct = allProducts.find((product) => product.id === productId);
+    setSelectedProduct(selectedProduct);
+  };
   const handleSearchInput = (e) => {
     e.preventDefault();
     setSearchBar(e.target.value);
@@ -35,13 +42,16 @@ const Store = () => {
       <div className="sale_continer">
         <div className="sale_section">
           {filterProductsOne.map((product) => (
+                <Link to={`/product/${product.id}`}>
             <div className="sale_item" key={product.id}>
               <img
                 className="sale_item_img"
                 src={product.photo}
                 alt={product.productName}
               />
-              <h2 className="sale_iten_title">{product.productName}</h2>
+            
+                   <h2 className="sale_iten_title">{product.productName}</h2>
+           
               <p className="sale_item_about">{product.productModel}</p>
               <div className="sale_item_box">
                 <span className="sale_item_price">$ {product.price}</span>
@@ -51,7 +61,7 @@ const Store = () => {
                   alt="Add to Cart"
                 />
               </div>
-            </div>
+            </div>   </Link>
           ))}
         </div>
 
@@ -64,7 +74,10 @@ const Store = () => {
                   src={product.photo}
                   alt={product.productName}
                 />
-                <h2 className="sale_iten_title">{product.productName}</h2>
+
+              <Link to={`/product/${product.id}`}>
+                   <h2 className="sale_iten_title">{product.productName}</h2>
+              </Link>
                 <p className="sale_item_about">{product.productModel}</p>
                 <div className="sale_item_box">
                   <span className="sale_item_price">$ {product.price}</span>

@@ -18,7 +18,9 @@ export const productSectionOne = [
   productName: 'Apple Watch',
   productModel: 'Series 5 SE',
   price: 529.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: "The Apple Watch SE has the same larger Retina display as Series 6, so you can see more at a glance. Advanced sensors to track all your fitness and workout goals, And powerful features to keep you healthy and safe. ",
+  details: 'Lorem ipsum',
  },
  {
   id: 2,
@@ -26,7 +28,9 @@ export const productSectionOne = [
   productName: 'Sony ZX330BT',
   productModel: 'Light Grey',
   price: 39.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: "The Apple Watch SE has the same larger Retina display as Series 6, so you can see more at a glance. Advanced sensors to track all your fitness and workout goals, And powerful features to keep you healthy and safe. ",
+  details: 'Lorem ipsum',
  },
  {
   id: 3,
@@ -34,7 +38,9 @@ export const productSectionOne = [
   productName: 'iPhone 13',
   productModel: 'Navy Blue',
   price: 729.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
  },
  {
   id: 4,
@@ -42,7 +48,9 @@ export const productSectionOne = [
   productName: 'iPhone 13 Pro',
   productModel: 'Grey',
   price: 819.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
  },
  {
   id: 5,
@@ -50,7 +58,9 @@ export const productSectionOne = [
   productName: 'iPhone 12',
   productModel: 'Subway Blue',
   price: 619.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
  },
 ];
 
@@ -61,7 +71,10 @@ export const productSectionSecond = [
   productName: 'Samsung Galaxy S21+',
   productModel: 'Lilac Purple',
   price: 849.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
+
  },
 
  {
@@ -70,7 +83,9 @@ export const productSectionSecond = [
   productName: 'iPhone 11 Red',
   productModel: 'Product RED',
   price: 3249.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
  },
  {
   id: 8,
@@ -78,7 +93,9 @@ export const productSectionSecond = [
   productName: 'iPhone 12 White',
   productModel: 'Milky White',
   price: 619.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
  },
  {
   id: 9,
@@ -86,7 +103,9 @@ export const productSectionSecond = [
   productName: "Samsung Galaxy Note",
   productModel: '2 - Options',
   price: 999.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
  },
  {
   id: 10,
@@ -94,6 +113,8 @@ export const productSectionSecond = [
   productName: "Iphone 11",
   productModel: 'Serious Black',
   price: 696.99,
-  addToCartIcon: AddToCartIcon
+  addToCartIcon: AddToCartIcon,
+  description: 'Lorem ipsum',
+  details: 'Lorem ipsum',
  },
 ]
