@@ -6,13 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Store = () => {
   const [searchBar, setSearchBar] = useState('');
-  const [selectedProduct, setSelectedProduct] = useState(null)
-  
-  const handleProductClick = (productId) => {
-    const allProducts = [...productSectionOne, ...productSectionSecond];
-    const selectedProduct = allProducts.find((product) => product.id === productId);
-    setSelectedProduct(selectedProduct);
-  };
+
   const handleSearchInput = (e) => {
     e.preventDefault();
     setSearchBar(e.target.value);
@@ -42,32 +36,7 @@ const Store = () => {
       <div className="sale_continer">
         <div className="sale_section">
           {filterProductsOne.map((product) => (
-                <Link to={`/product/${product.id}`}>
-            <div className="sale_item" key={product.id}>
-              <img
-                className="sale_item_img"
-                src={product.photo}
-                alt={product.productName}
-              />
-            
-                   <h2 className="sale_iten_title">{product.productName}</h2>
-           
-              <p className="sale_item_about">{product.productModel}</p>
-              <div className="sale_item_box">
-                <span className="sale_item_price">$ {product.price}</span>
-                <img
-                  className="add_to_cart_btn"
-                  src={product.addToCartIcon}
-                  alt="Add to Cart"
-                />
-              </div>
-            </div>   </Link>
-          ))}
-        </div>
-
-        <div className="section_second_container">
-          <div className="sale_section">
-            {filterProducSecond.map((product) => (
+            <Link to={`/product/${product.id}`}>
               <div className="sale_item" key={product.id}>
                 <img
                   className="sale_item_img"
@@ -75,9 +44,8 @@ const Store = () => {
                   alt={product.productName}
                 />
 
-              <Link to={`/product/${product.id}`}>
-                   <h2 className="sale_iten_title">{product.productName}</h2>
-              </Link>
+                <h2 className="sale_iten_title">{product.productName}</h2>
+
                 <p className="sale_item_about">{product.productModel}</p>
                 <div className="sale_item_box">
                   <span className="sale_item_price">$ {product.price}</span>
@@ -88,6 +56,33 @@ const Store = () => {
                   />
                 </div>
               </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="section_second_container">
+          <div className="sale_section">
+
+            {filterProducSecond.map((product) => (
+              <Link to={`/product/${product.id}`}>
+                <div className="sale_item" key={product.id}>
+                  <img
+                    className="sale_item_img"
+                    src={product.photo}
+                    alt={product.productName}
+                  />
+                  <h2 className="sale_iten_title">{product.productName}</h2>
+                  <p className="sale_item_about">{product.productModel}</p>
+                  <div className="sale_item_box">
+                    <span className="sale_item_price">$ {product.price}</span>
+                    <img
+                      className="add_to_cart_btn"
+                      src={product.addToCartIcon}
+                      alt="Add to Cart"
+                    />
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

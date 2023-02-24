@@ -10,59 +10,58 @@ import Samsung21 from "../Photo/Samsung-S21.svg"
 import samsungNote21 from "../Photo/Samsung-Note21.svg"
 import Iphone11black from "../Photo/iphone-12-black-01.svg"
 
-
 export const productSectionOne = [
-  {
-   id: 1,
-   photo: WatchPhoto,
-   productName: 'Apple Watch',
-   productModel: 'Series 5 SE',
-   price: 529.99,
-   addToCartIcon: AddToCartIcon,
-   description: "The Apple Watch SE has the same larger Retina display as Series 6, so you can see more at a glance. Advanced sensors to track all your fitness and workout goals, And powerful features to keep you healthy and safe. ",
-   details: 'Apple Watch requires an iPhone 8 or later with iOS 16 or later. Wireless service plan required for cellular service. Apple Watch and iPhone service provider must be the same. Not all service providers support enterprise accounts; check with your employer and service provider. Roaming is not available outside your carrier network coverage area. Contact your service provider for more details. Check apple.com/watch/cellular for participating wireless carriers and eligibility.',
-   storageCapacity: "32GB",
-   condition: "Brand new",
-   series: "Series 5"
+ {
+  id: 1,
+  photo: WatchPhoto,
+  productName: 'Apple Watch',
+  productModel: 'Series 5 SE',
+  price: 529.99,
+  addToCartIcon: AddToCartIcon,
+  description: "The Apple Watch SE has the same larger Retina display as Series 6, so you can see more at a glance. Advanced sensors to track all your fitness and workout goals, And powerful features to keep you healthy and safe. ",
+  details: 'Apple Watch requires an iPhone 8 or later with iOS 16 or later. Wireless service plan required for cellular service. Apple Watch and iPhone service provider must be the same. Not all service providers support enterprise accounts; check with your employer and service provider. Roaming is not available outside your carrier network coverage area. Contact your service provider for more details. Check apple.com/watch/cellular for participating wireless carriers and eligibility.',
+  storageCapacity: "32GB",
+  condition: "Brand new",
+  series: "Series 5"
  },
  {
-   id: 2,
-   photo: Headphones,
-   productName: 'Sony ZX330BT',
-   productModel: 'Light Grey',
-   price: 39.99,
-   addToCartIcon: AddToCartIcon,
-   description: "These wireless headphones feature Bluetooth connectivity, an adjustable headband, and up to 30 hours of battery life.",
-   details: "Experience dynamic sound and deep bass with the 30mm driver units. The swivel design makes these headphones convenient to pack in your bag, and the built-in microphone allows for hands-free calling.",
-   storageCapacity: "",
-   condition: "",
-   series: ""
+  id: 2,
+  photo: Headphones,
+  productName: 'Sony ZX330BT',
+  productModel: 'Light Grey',
+  price: 39.99,
+  addToCartIcon: AddToCartIcon,
+  description: "These wireless headphones feature Bluetooth connectivity, an adjustable headband, and up to 30 hours of battery life.",
+  details: "Experience dynamic sound and deep bass with the 30mm driver units. The swivel design makes these headphones convenient to pack in your bag, and the built-in microphone allows for hands-free calling.",
+  storageCapacity: "",
+  condition: "",
+  series: ""
  },
  {
-   id: 3,
-   photo: Iphone13,
-   productName: 'iPhone 13',
-   productModel: 'Navy Blue',
-   price: 729.99,
-   addToCartIcon: AddToCartIcon,
-   description: "The iPhone 13 features a 6.1-inch Super Retina XDR display, A15 Bionic chip, and a dual-camera system.",
-   details: "The ceramic shield front cover provides superior durability and the phone is water-resistant up to 6 meters for up to 30 minutes. Face ID provides secure authentication and Apple Pay allows for easy payments.",
-   storageCapacity: "128GB",
-   condition: "Brand new",
-   series: ""
+  id: 3,
+  photo: Iphone13,
+  productName: 'iPhone 13',
+  productModel: 'Navy Blue',
+  price: 729.99,
+  addToCartIcon: AddToCartIcon,
+  description: "The iPhone 13 features a 6.1-inch Super Retina XDR display, A15 Bionic chip, and a dual-camera system.",
+  details: "The ceramic shield front cover provides superior durability and the phone is water-resistant up to 6 meters for up to 30 minutes. Face ID provides secure authentication and Apple Pay allows for easy payments.",
+  storageCapacity: "128GB",
+  condition: "Brand new",
+  series: ""
  },
  {
-   id: 4,
-   photo: Iphone13Pro,
-   productName: 'iPhone 13 Pro',
-   productModel: 'Grey',
-   price: 819.99,
-   addToCartIcon: AddToCartIcon,
-   description: "The iPhone 13 Pro features a 6.1-inch Super Retina XDR display, A15 Bionic chip, and a triple-camera system with night mode.",
-   details: "The ceramic shield front cover provides superior durability and the phone is water-resistant up to 6 meters for up to 30 minutes. Face ID provides secure authentication and Apple Pay allows for easy payments. The Pro camera system allows for stunning photos and video and the LiDAR scanner provides AR capabilities.",
-   storageCapacity: "256GB",
-   condition: "Brand new",
-   series: ""
+  id: 4,
+  photo: Iphone13Pro,
+  productName: 'iPhone 13 Pro',
+  productModel: 'Grey',
+  price: 819.99,
+  addToCartIcon: AddToCartIcon,
+  description: "The iPhone 13 Pro features a 6.1-inch Super Retina XDR display, A15 Bionic chip, and a triple-camera system with night mode.",
+  details: "The ceramic shield front cover provides superior durability and the phone is water-resistant up to 6 meters for up to 30 minutes. Face ID provides secure authentication and Apple Pay allows for easy payments. The Pro camera system allows for stunning photos and video and the LiDAR scanner provides AR capabilities.",
+  storageCapacity: "256GB",
+  condition: "Brand new",
+  series: ""
  },
  {
   id: 5,
@@ -71,12 +70,12 @@ export const productSectionOne = [
   productModel: 'Subway Blue',
   price: 619.99,
   addToCartIcon: AddToCartIcon,
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis arcu nibh, at bibendum nisl facilisis eu. Etiam sodales tellus quis justo facilisis, vitae tincidunt nunc faucibus. Pellentesque viverra orci at aliquam pharetra. Donec sit amet imperdiet lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec quis est ut mauris euismod egestas. Integer sed libero lacus. Praesent maximus ex eget massa bibendum, a pharetra nulla convallis. In ut justo vel felis feugiat elementum.",
-  storageCapacity:"",
+  description: "The iPhone 12 in Subway Blue is a sleek and stylish device with a powerful A14 Bionic chip and 5G capabilities. It has a 6.1-inch Super Retina XDR display and a Ceramic Shield front cover for added durability.",
+  details: "256GB storage, 4GB RAM, Dual 12MP Ultra Wide and Wide cameras with Night mode, TrueDepth camera with Face ID, Water and dust resistance (IP68), iOS 14",
+  storageCapacity: "256GB",
   condition: "Brand new",
-  series:""
-},
+  series: "iPhone 12"
+ },
 ];
 
 export const productSectionSecond = [
@@ -128,11 +127,11 @@ export const productSectionSecond = [
   productModel: '2 - Options',
   price: 999.99,
   addToCartIcon: AddToCartIcon,
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis arcu nibh, at bibendum nisl facilisis eu. Etiam sodales tellus quis justo facilisis, vitae tincidunt nunc faucibus. Pellentesque viverra orci at aliquam pharetra. Donec sit amet imperdiet lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec quis est ut mauris euismod egestas. Integer sed libero lacus. Praesent maximus ex eget massa bibendum, a pharetra nulla convallis. In ut justo vel felis feugiat elementum.",
-  storageCapacity:"",
+  description: "The Samsung Galaxy Note is a powerful and versatile device with a large 6.7-inch Dynamic AMOLED 2X display and a powerful Snapdragon 865+ processor. It comes with an S Pen for precise control and creativity.",
+  details: "256GB storage, 12GB RAM, Triple rear camera setup (12MP+12MP+12MP), 10MP front-facing camera, Water and dust resistant (IP68), 5G capable, Android 11",
+  storageCapacity: "256GB",
   condition: "Refurbished",
-  series:""
+  series: "Galaxy Note"
 },
 {
   id: 10,
@@ -141,10 +140,10 @@ export const productSectionSecond = [
   productModel: 'Serious Black',
   price: 696.99,
   addToCartIcon: AddToCartIcon,
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis arcu nibh, at bibendum nisl facilisis eu. Etiam sodales tellus quis justo facilisis, vitae tincidunt nunc faucibus. Pellentesque viverra orci at aliquam pharetra. Donec sit amet imperdiet lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec quis est ut mauris euismod egestas. Integer sed libero lacus. Praesent maximus ex eget massa bibendum, a pharetra nulla convallis. In ut justo vel felis feugiat elementum.",
-  storageCapacity:"",
+  description: "The iPhone 11 in Serious Black is a reliable and high-performing device with a 6.1-inch Liquid Retina display and an A13 Bionic chip. It has a dual-camera system with Night mode and can shoot 4K video.",
+  details: "128GB storage, 4GB RAM, Dual 12MP Ultra Wide and Wide cameras with Night mode, TrueDepth camera with Face ID, Water and dust resistance (IP68), iOS 13",
+  storageCapacity: "128GB",
   condition: "Used",
-  series:""
+  series: "iPhone 11"
 }
 ]
