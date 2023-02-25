@@ -43,9 +43,7 @@ const Store = () => {
                   src={product.photo}
                   alt={product.productName}
                 />
-
                 <h2 className="sale_iten_title">{product.productName}</h2>
-
                 <p className="sale_item_about">{product.productModel}</p>
                 <div className="sale_item_box">
                   <span className="sale_item_price">$ {product.price}</span>
@@ -62,7 +60,6 @@ const Store = () => {
 
         <div className="section_second_container">
           <div className="sale_section">
-
             {filterProducSecond.map((product) => (
               <Link to={`/product/${product.id}`}>
                 <div className="sale_item" key={product.id}>

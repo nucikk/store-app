@@ -17,8 +17,8 @@ const Productview = () => {
   }
 
   const handleRemoveFrom = () => {
-   setIsRemoveFromCart(true)
-   setIsAddToCart(false)
+    setIsRemoveFromCart(true)
+    setIsAddToCart(false)
   }
   /*
     Find the product in the first section, if it's not there, find it in the second section.returns The product object. */
@@ -49,7 +49,6 @@ const Productview = () => {
                 <span>Back</span>
               </div>
             </Link>
-
 
             <div className="store_about_container">
               <div className="product_img_bg">
@@ -92,14 +91,12 @@ const Productview = () => {
               <Link>
                 <img className="product_img" src={product.photo} alt={product.productName} />
               </Link>
-            ) 
-          } 
+            )
+          }
         </div>
       </div>
     </>
   )
 }
-
-
 
 export default Productview
