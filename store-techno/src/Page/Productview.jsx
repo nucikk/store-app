@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../Style/Productview.css"
 import Navbar from '../Components/Navbar'
 import { Link, useParams } from 'react-router-dom'
@@ -9,16 +9,21 @@ const Productview = () => {
   const [isAddToCart, setIsAddToCart] = useState(false)
   // eslint-disable-next-line no-unused-vars
   const [isRemoveFromCart, setIsRemoveFromCart] = useState(false)
+  const [cart, setCart] = useState([])
 
 
   const handleAddToCart = () => {
     setIsAddToCart(true)
     setIsRemoveFromCart(false)
+    setCart([...cart, product])
+    localStorage.setItem('cart', JSON.stringify([...cart, product]))
   }
 
   const handleRemoveFrom = () => {
     setIsRemoveFromCart(true)
     setIsAddToCart(false)
+    setCart(cart.filter(p => p.id !== product.id))
+    localStorage.setItem('cart', JSON.stringify(cart.filter(p => p.id !== product.id)))
   }
   /*
     Find the product in the first section, if it's not there, find it in the second section.returns The product object. */
@@ -30,7 +35,13 @@ const Productview = () => {
       productSectionSecond.find(p => p.id === id);
     return product;
   }
-
+  // Added code to persist the added product on page refresh
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem('cart'));
+    if (storedCart) {
+      setCart(storedCart);
+    }
+  }, [])
   // Check if product is not undefined before accessing its properties
   if (!product) {
     return (<div className="product_not_found">
@@ -71,6 +82,8 @@ const Productview = () => {
                 ) : null}
 
                 <div className="add_cart_box">
+
+
                   <button className="add_cart_btn" onClick={handleAddToCart}>Add to Bag</button>
                   <button className="add_cart_btn" onClick={handleRemoveFrom}>Remove</button>
                 </div>
@@ -85,15 +98,14 @@ const Productview = () => {
           </div>
 
         </div>
-        <div className="product_view_bag">
-          {
-            isAddToCart && (
-              <Link>
-                <img className="product_img" src={product.photo} alt={product.productName} />
-              </Link>
-            )
-          }
-        </div>
+        {cart.some((item) => item.id === product.id) && (
+
+          <div className="product_view_bag">
+            <Link>
+              <img className="product_img" src={product.photo} alt={product.productName} />
+            </Link>
+          </div>
+        )}
       </div>
     </>
   )
