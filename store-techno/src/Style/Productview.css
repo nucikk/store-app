@@ -15,7 +15,7 @@
 
 .product_view_details {
  height: 600px;
- padding: 40px 30px;
+ padding: 40px 50px;
  position: relative;
 }
 
@@ -101,6 +101,12 @@
  background-color: black;
  color: white;
  font-size: 18px;
+  border: none;
+}
+.add_cart_btn:nth-child(2) {
+ background-color: red;
+ margin-left: 19px;
+
 }
 
 .product_not_found {
@@ -120,7 +126,7 @@
 
 .product_details_view {
  width: 90%;
- padding: 20px 20px 10px 30px;
+ padding: 20px 20px 10px 55px;
  font-size: 20px;
  line-height: 1.2;
  color:rgba(26, 31, 22, 0.5);
@@ -129,7 +135,14 @@
 
 
 .product_view_bag {
- width: 490px;
- height: 100%;
- background-color: #7ba2ff;
+ width: 427px;
+ padding: 20px 0 20px 15px;
+ border-left:  2px solid black;
+}
+
+.product_img {
+ width: 120px;
+ background-color:#ffffff;
+ border-radius: 20px;
+
 }
