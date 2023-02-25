@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import "../Style/Dashboard.css"
+import React, { useState } from 'react';
+import '../Style/Dashboard.css';
 import { productSectionOne } from '../Components/Product';
-import { productSectionSecond } from "../Components/Product"
+import { productSectionSecond } from '../Components/Product';
 import { Link } from 'react-router-dom';
 
 const Store = () => {
@@ -36,8 +36,8 @@ const Store = () => {
       <div className="sale_continer">
         <div className="sale_section">
           {filterProductsOne.map((product) => (
-            <Link to={`/product/${product.id}`}>
-              <div className="sale_item" key={product.id}>
+            <Link to={`/product/${product.id}`} key={product.id}>
+              <div className="sale_item">
                 <img
                   className="sale_item_img"
                   src={product.photo}
@@ -61,8 +61,8 @@ const Store = () => {
         <div className="section_second_container">
           <div className="sale_section">
             {filterProducSecond.map((product) => (
-              <Link to={`/product/${product.id}`}>
-                <div className="sale_item" key={product.id}>
+              <Link to={`/product/${product.id}`} key={product.id}>
+                <div className="sale_item">
                   <img
                     className="sale_item_img"
                     src={product.photo}
@@ -89,4 +89,3 @@ const Store = () => {
 };
 
 export default Store;
-

@@ -10,6 +10,7 @@
 .product_view_about {
  width: 84rem;
  height: 100%;
+ border-right: 2px solid black;
  overflow: hidden;
 }
 
@@ -112,6 +113,15 @@
  margin-left: 19px;
 }
 
+.add_cart_btn:nth-child(3) {
+ width: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #0db53d;
+ margin-left: 19px;
+}
+
 .product_not_found {
  width: 100%;
  background-image: url("../Photo/error404.jpg");
@@ -137,12 +147,18 @@
 
 .product_view_bag {
  width: 427px;
- padding: 20px 0 20px 15px;
- border-left: 2px solid black;
+ height: 350px;
+ padding: 20px 0 0px 15px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ position: relative;
 }
 
 .product_img {
- width: 120px;
+ width: 150px;
+ height: 150px;
  background-color: #ffffff;
  border-radius: 20px;
 }
+
