@@ -1,0 +1,7 @@
+.chek_bag_container {
+ max-width: 100%;
+ height: 100%;
+ background-color: rgb(212, 172, 99);
+ overflow: hidden;
+ position: relative;
+}

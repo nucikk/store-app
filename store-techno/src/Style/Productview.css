@@ -64,10 +64,16 @@
  font-family: 'Source Sans Pro', sans-serif;
  color: rgba(26, 31, 22, 0.5);
 }
-
-.product_rating {
- font-size: 12px;
+.rating {
+ width: 300px;
+ height: 20px; 
+ display: flex;
+ align-items: center;
 }
+.product_rating {
+ font-size: 15px;
+}
+
 
 .product_price {
  font-size: 25px;

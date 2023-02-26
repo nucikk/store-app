@@ -9,6 +9,7 @@ import iPhone12White from "../Photo/Iphone-12-white.svg"
 import Samsung21 from "../Photo/Samsung-S21.svg"
 import samsungNote21 from "../Photo/Samsung-Note21.svg"
 import Iphone11black from "../Photo/iphone-12-black-01.svg"
+import Stars from "../Photo/Stars.svg"
 
 export const productSectionOne = [
   {
@@ -16,6 +17,7 @@ export const productSectionOne = [
     photo: WatchPhoto,
     productName: 'Apple Watch',
     productModel: 'Series 5 SE',
+    rating: Stars,
     price: 529.99,
     addToCartIcon: AddToCartIcon,
     description: "The Apple Watch SE has the same larger Retina display as Series 6, so you can see more at a glance. Advanced sensors to track all your fitness and workout goals, And powerful features to keep you healthy and safe. ",
@@ -29,6 +31,7 @@ export const productSectionOne = [
     photo: Headphones,
     productName: 'Sony ZX330BT',
     productModel: 'Light Grey',
+    rating: Stars,
     price: 39.99,
     addToCartIcon: AddToCartIcon,
     description: "These wireless headphones feature Bluetooth connectivity, an adjustable headband, and up to 30 hours of battery life.",
@@ -42,6 +45,7 @@ export const productSectionOne = [
     photo: Iphone13,
     productName: 'iPhone 13',
     productModel: 'Navy Blue',
+    rating: Stars,
     price: 729.99,
     addToCartIcon: AddToCartIcon,
     description: "The iPhone 13 features a 6.1-inch Super Retina XDR display, A15 Bionic chip, and a dual-camera system.",
@@ -55,6 +59,7 @@ export const productSectionOne = [
     photo: Iphone13Pro,
     productName: 'iPhone 13 Pro',
     productModel: 'Grey',
+    rating: Stars,
     price: 819.99,
     addToCartIcon: AddToCartIcon,
     description: "The iPhone 13 Pro features a 6.1-inch Super Retina XDR display, A15 Bionic chip, and a triple-camera system with night mode.",
@@ -68,6 +73,7 @@ export const productSectionOne = [
     photo: iPhone12SubwayBlue,
     productName: 'iPhone 12',
     productModel: 'Subway Blue',
+    rating: Stars,
     price: 619.99,
     addToCartIcon: AddToCartIcon,
     description: "The iPhone 12 in Subway Blue is a sleek and stylish device with a powerful A14 Bionic chip and 5G capabilities. It has a 6.1-inch Super Retina XDR display and a Ceramic Shield front cover for added durability.",
@@ -84,6 +90,7 @@ export const productSectionSecond = [
     photo: Samsung21,
     productName: 'Samsung Galaxy S21+',
     productModel: 'Lilac Purple',
+        rating: Stars,
     price: 849.99,
     addToCartIcon: AddToCartIcon,
     description: "Experience the ultimate in smartphone technology with the Samsung Galaxy S21+. Its 6.7-inch display, 5G connectivity, and powerful processor provide seamless performance for all your needs. Plus, with a stunning lilac purple finish, it's a device that's sure to turn heads.",
@@ -98,6 +105,7 @@ export const productSectionSecond = [
     photo: iPhone11Red,
     productName: 'iPhone 11 Red',
     productModel: 'Product RED',
+    rating: Stars,
     price: 3249.99,
     addToCartIcon: AddToCartIcon,
     description: "Make a statement with the iPhone 11 Product RED. Its bold red finish is eye-catching and unique, and it's packed with advanced features to enhance your mobile experience.",
@@ -112,6 +120,7 @@ export const productSectionSecond = [
     photo: iPhone12White,
     productName: 'iPhone 12 White',
     productModel: 'Milky White',
+    rating: Stars,
     price: 619.99,
     addToCartIcon: AddToCartIcon,
     description: "The iPhone 12 in Milky White is a stunning device that offers powerful performance and sleek style. Its 6.1-inch display, 5G connectivity, and A14 Bionic chip make it a top choice for mobile enthusiasts.",
@@ -125,6 +134,7 @@ export const productSectionSecond = [
     photo: samsungNote21,
     productName: "Samsung Galaxy Note",
     productModel: '2 - Options',
+    rating: Stars,
     price: 999.99,
     addToCartIcon: AddToCartIcon,
     description: "The Samsung Galaxy Note is a powerful and versatile device with a large 6.7-inch Dynamic AMOLED 2X display and a powerful Snapdragon 865+ processor. It comes with an S Pen for precise control and creativity.",
@@ -138,6 +148,7 @@ export const productSectionSecond = [
     photo: Iphone11black,
     productName: "Iphone 11",
     productModel: 'Serious Black',
+    rating: Stars,
     price: 696.99,
     addToCartIcon: AddToCartIcon,
     description: "The iPhone 11 in Serious Black is a reliable and high-performing device with a 6.1-inch Liquid Retina display and an A13 Bionic chip. It has a dual-camera system with Night mode and can shoot 4K video.",

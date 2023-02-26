@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import "../Style/Productview.css"
 import Navbar from '../Components/Navbar'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { productSectionOne, productSectionSecond } from "../Components/Product"
 import BackItem from '../Components/BackItem'
 import AboutTech from '../Components/AboutTech'
 import AddIconShop from "../Photo/bag-handle.svg"
+
+// view of a product with its details, an option to add or remove it from the cart, and a list of items in the cart.
 const Productview = () => {
+  // eslint-disable-next-line no-unused-vars
   const [isAddToCart, setIsAddToCart] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [isRemoveFromCart, setIsRemoveFromCart] = useState(false)
   const [cart, setCart] = useState([])
 
-
-  const { id } = useParams();
-
+  const { id } = useParams(); // ეს ID შეესაბამება პროდუქტის უნიკალურ იდენტიფიკატორს, რომლის ჩვენებაც გვინდა პროდუქტის ნახვის გვერდზე.
   const product = findProductById(parseInt(id));
 
   function findProductById(id) {
@@ -33,7 +35,7 @@ const Productview = () => {
   const handleRemoveFrom = () => {
     setIsRemoveFromCart(true);
     setIsAddToCart(false);
-  
+
     if (cart.length > 0) {
       const newCart = [...cart];
       newCart.pop();
@@ -76,10 +78,12 @@ const Productview = () => {
                 <div className="add_cart_box">
                   <button className="add_cart_btn" onClick={handleAddToCart}>Add to Bag</button>
                   <button className="add_cart_btn" onClick={handleRemoveFrom}>Remove</button>
-                  <div className="add_cart_btn">
-                    <img src={AddIconShop} alt="" />
-                  </div>
-          
+                  <Link to="/checkItem" className="add_cart_btn">
+                    <div >
+                      <img src={AddIconShop} alt="" />
+                    </div>
+                  </Link>
+
                 </div>
               </div>
             </div>
@@ -88,28 +92,27 @@ const Productview = () => {
             <p>{product.details}</p>
           </div>
         </div>
-        {cart.some((item) => item.id === product.id) && (      
-           <>
-          <div className="product_view_bag">
-     
-            {cart.map((item) => (
-              <div className="bag_product" key={item.id}>
-                <Link to={`/product/${item.id}`}>
-                  <img className="product_img" src={item.photo} alt={item.productName} />
-                </Link>
-              </div>
-            ))}
-            
-          </div>  
-     
-          
+        {cart.some((item) => item.id === product.id) && (
+          <>
+            <div className="product_view_bag">
+
+              {cart.map((item) => (
+                <div className="bag_product" key={item.id}>
+                  <Link to={`/product/${item.id}`}>
+                    <img className="product_img" src={item.photo} alt={item.productName} />
+                  </Link>
+                </div>
+              ))}
+
+            </div>
           </>
         )}
 
-     
       </div>
     </>
   )
 }
 
 export default Productview
+
+
