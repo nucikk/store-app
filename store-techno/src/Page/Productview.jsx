@@ -14,6 +14,8 @@ const Productview = () => {
   // eslint-disable-next-line no-unused-vars
   const [isRemoveFromCart, setIsRemoveFromCart] = useState(false)
   const [cart, setCart] = useState([])
+  const [cartPhotos, setCartPhotos] = useState([]);
+
 
   const { id } = useParams(); // ეს ID შეესაბამება პროდუქტის უნიკალურ იდენტიფიკატორს, რომლის ჩვენებაც გვინდა პროდუქტის ნახვის გვერდზე.
   const product = findProductById(parseInt(id));
@@ -26,16 +28,16 @@ const Productview = () => {
 
   // add product from cart
   const handleAddToCart = () => {
-    setIsAddToCart(true)
-    setIsRemoveFromCart(false)
-    setCart([...cart, product])
-    localStorage.setItem('cart', JSON.stringify([...cart, product]))
-  }
+    setCart([...cart, product]);
+    setCartPhotos([...cartPhotos, product.photo]); // add new photo to cartPhotos
+    localStorage.setItem('cart', JSON.stringify([...cart, product]));
+  };
+  useEffect(() => {
+    setCartPhotos(cart.map(item => item.photo));
+  }, [cart, setCartPhotos]);
+
   // Remove product from cart
   const handleRemoveFrom = () => {
-    setIsRemoveFromCart(true);
-    setIsAddToCart(false);
-
     if (cart.length > 0) {
       const newCart = [...cart];
       newCart.pop();
@@ -97,8 +99,8 @@ const Productview = () => {
             <div className="product_view_bag">
 
               {cart.map((item) => (
-                <div className="bag_product" key={item.id}>
-                  <Link to={`/product/${item.id}`}>
+                <div className="bag_product" key={item}>
+                 <Link to={`/product/${item}`}>
                     <img className="product_img" src={item.photo} alt={item.productName} />
                   </Link>
                 </div>
