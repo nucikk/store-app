@@ -9,10 +9,10 @@
 
 .navbar {
  width: 72px;
- height: 1080px;
  background-color: #ffffff;
  margin: 0 50px 0 10px;
  border-radius: 10px;
+ overflow: auto;
 }
 
 .icon_list {
@@ -27,7 +27,7 @@
 }
 
 .icon:nth-child(5) {
- margin-top: 660px;
+overflow: auto;
 }
 
 

@@ -24,8 +24,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Dashboard />}></Route>
-        <Route path="/product/:id" element={<Productview />} />
-        <Route path="/CheckItem" element={<CheckBag cart={cart} cartPhotos={cartPhotos} />} />
+        <Route path="/product/:id" element={<Productview productName="Product name" productModel="Product model"/>} />
+        <Route path="/checkItem/:id"  element={<CheckBag cart={cart} cartPhotos={cartPhotos} />} />
       </Routes>
     </>
   );
