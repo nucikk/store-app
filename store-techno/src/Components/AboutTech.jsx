@@ -18,7 +18,7 @@ const AboutTech = () => {
         <img src={product.rating} alt="stars" />
         <span className="product_rating"> 4.5 / 5</span>
       </div>
-      <p className="product_price">$ {product.price}</p>
+      <p className="product_price">$ {parseFloat(product.price).toFixed(2)}</p>
 
       <p className="product_description">{product.description}</p>
       {product.storageCapacity || product.condition || product.series ? (

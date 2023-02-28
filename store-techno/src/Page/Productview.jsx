@@ -27,8 +27,8 @@ const Productview = ({ productName, productModel }) => {
 
   // add product from cart
   const handleAddToCart = () => {
-    setCart([...cart, product]);
     setCartPhotos([...cartPhotos, product.photo]); // add new photo to cartPhotos
+    setCart([...cart, product]);
     localStorage.setItem('cart', JSON.stringify([...cart, product]));
   };
   useEffect(() => {
@@ -37,20 +37,20 @@ const Productview = ({ productName, productModel }) => {
 
   // Remove product from cart
   const handleRemoveFrom = () => {
-    if (cart.length > 0) {
-      const newCart = [...cart];
-      newCart.pop();
-      setCart(newCart);
-      localStorage.setItem('cart', JSON.stringify(newCart));
-    }
+    const newCart = [...cart];
+    newCart.pop();
+    setCart(newCart);
+    localStorage.setItem('cart', JSON.stringify(newCart));
   };
+
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart'));
     if (storedCart) {
       setCart(storedCart);
+      setCartPhotos(storedCart.map(item => item.photo));
     }
-  }, [])
+  }, []);
 
   if (!product) {
     return (
@@ -81,7 +81,7 @@ const Productview = ({ productName, productModel }) => {
                   <button className="add_cart_btn" onClick={handleRemoveFrom}>Remove</button>
                   <Link to={{
                     pathname: `/checkItem/${product.id}`,
-                    search: `productName=${productName}&productModel=${productModel}&{}`
+                    search: `productName=${productName}&productModel=${productModel}`
                   }} className="add_cart_btn">
                     <div >
                       <img src={AddIconShop} alt="" />
@@ -100,8 +100,8 @@ const Productview = ({ productName, productModel }) => {
           <>
             <div className="product_view_bag">
 
-              {cart.map((item) => (
-                <div className="bag_product" key={item}>
+              {cart.map((item, index) => (
+                <div className="bag_product" key={index}>
                   <Link to={`/product/${item}`}>
                     <img className="product_img" src={item.photo} alt={item.productName} />
                   </Link>
@@ -118,5 +118,3 @@ const Productview = ({ productName, productModel }) => {
 }
 
 export default Productview
-
-
