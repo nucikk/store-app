@@ -87,7 +87,6 @@ const Productview = ({ productName, productModel }) => {
                       <img src={AddIconShop} alt="" />
                     </div>
                   </Link>
-
                 </div>
               </div>
             </div>

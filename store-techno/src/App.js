@@ -3,6 +3,7 @@ import Productview from "./Page/Productview";
 import Dashboard from "./Page/Dashboard";
 import CheckBag from "./Page/CheckBag";
 import { useEffect, useState } from "react";
+import Checkout from "./Page/Checkout";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<Dashboard />}></Route>
         <Route path="/product/:id" element={<Productview productName="Product name" productModel="Product model"/>} />
         <Route path="/checkItem/:id"  element={<CheckBag cart={cart} cartPhotos={cartPhotos} />} />
+        <Route path="/checkout"  element={<Checkout />} />
       </Routes>
     </>
   );

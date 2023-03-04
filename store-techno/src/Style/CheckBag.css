@@ -16,7 +16,6 @@
 .cart_view {
  width: 500px;
  height: 350px;
- padding: 20px 0 0px 15px;
  display: flex;
  flex-wrap: wrap;
  justify-content: space-around;
@@ -57,6 +56,11 @@
  width: 345px;
  border-radius: 20px;
  position: absolute;
+ display: flex;
+}
+
+.product_img {
+ margin: 5px;
 }
 
 .cart_name {
@@ -113,4 +117,28 @@
  border: none;
  background-color: #E5252C;
  border-radius: 20px;
+}
+
+.checkout_box {
+ width: 100%;
+ padding: 10px;
+ position: relative;
+ display: block;
+ margin-bottom: 20px;
+}
+
+.checkout_btn {
+ width: 195px;
+ height: 45px;
+ border-radius: 10px;
+ background-color: black;
+ color: white;
+ font-size: 18px;
+ border: none;
+ margin: 0 0 20px 100px;
+}
+
+.total_item {
+ font-size: 22px;
+ font-weight: bold;
 }
