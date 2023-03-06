@@ -1,5 +1,25 @@
 .checkout_container {
  max-width: 1920px;
  min-height: 1080px;
+ overflow: hidden;
+ display: flex;
  background-color: darksalmon;
+}
+.checkout_item {
+ width: 86rem;
+ display: block;
+ justify-content: center;
+ align-items: center;
+ background-color: #e3dc0b;
+}
+.checkout_box {
+width: 900px;
+height: 400px;
+background-color: #2e678d;
+}
+
+.order {
+ width: 544px;
+ height: 400px;
+ background-color: #c8129d;
 }

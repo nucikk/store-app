@@ -109,7 +109,7 @@ const CheckBag = ({cart }) => {
  
         <div className="cart_view">
          <div className='checkout_box'> 
-         <Link to="/checkout">
+         <Link to="/payment">
            <button className='checkout_btn'>Checkout</button>
          </Link>
            

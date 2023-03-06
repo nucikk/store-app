@@ -4,8 +4,19 @@ const Checkout = () => {
   return (
     <>
     <div className="checkout_container">
-           CHEKOUT
+     <div className="checkout_item">
+   <div className="checkout_box">  
+       
     </div>
+   <div className="checkout_box">  
+       
+    </div>
+  
+     </div>
+       <div className="order">    </div>
+      
+    </div>  
+
     </>
   )
 }
