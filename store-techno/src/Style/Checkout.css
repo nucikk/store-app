@@ -12,7 +12,7 @@
  align-items: center;
  background-color: #e3dc0b;
 }
-.checkout_box {
+.checkout_box_item {
 width: 900px;
 height: 400px;
 background-color: #2e678d;
@@ -22,4 +22,5 @@ background-color: #2e678d;
  width: 544px;
  height: 400px;
  background-color: #c8129d;
+
 }

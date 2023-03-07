@@ -123,6 +123,11 @@
   background-repeat: no-repeat;
 }
 
+.add_payment_btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .secure_message {
   margin-top: -15px;
   display: flex;

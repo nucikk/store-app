@@ -3,7 +3,7 @@ import Productview from "./Page/Productview";
 import Dashboard from "./Page/Dashboard";
 import CheckBag from "./Page/CheckBag";
 import { useEffect, useState } from "react";
-// import Checkout from "./Page/Checkout";
+import Checkout from "./Page/Checkout";
 import Payment from "./Page/Payment";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         <Route path="/product/:id" element={<Productview productName="Product name" productModel="Product model"/>} />
         <Route path="/checkItem/:id"  element={<CheckBag cart={cart} cartPhotos={cartPhotos} />} />
         <Route path="/payment" element={<Payment />} />
-        {/* <Route path="/checkout"  element={<Checkout />} /> */}
+        <Route path="/checkout"  element={<Checkout />} />
       </Routes>
     </>
   );
