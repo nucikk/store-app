@@ -28,8 +28,8 @@ function App() {
         <Route path="/" element={<Dashboard />}></Route>
         <Route path="/product/:id" element={<Productview productName="Product name" productModel="Product model"/>} />
         <Route path="/checkItem/:id"  element={<CheckBag cart={cart} cartPhotos={cartPhotos} />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/checkout"  element={<Checkout />} />
+        <Route path="/checkout"  element={<Checkout />} />  
+         <Route path="/payment" element={<Payment />} />
       </Routes>
     </>
   );

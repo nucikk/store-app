@@ -5,14 +5,14 @@ import Navbar from '../Components/Navbar';
 import "../Style/CheckBag.css";
 import { productSectionOne, productSectionSecond } from "../Components/Product";
 
-const CheckBag = ({cart }) => {
+const CheckBag = ({ cart }) => {
   const [cartItems, setCartItems] = useState(cart)
-  
+
   const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
+  const query = new URLSearchParams(location.search);
   const { id } = useParams();
-  const [product, setProduct] = useState(findProductById(parseInt(id)));
-  const [total, setTotal] = useState(0);
+  const [selectedProduct, setSelectedProduct] = useState(findProductById(parseInt(id)));
+  const [total, setTotal] = useState(localStorage.getItem('total') || "");
 
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const CheckBag = ({cart }) => {
 
 
   useEffect(() => {
-    setProduct(findProductById(parseInt(id)));
+    setSelectedProduct(findProductById(parseInt(id)));
   }, [id]);
 
   function findProductById(id) {
@@ -34,8 +34,8 @@ const CheckBag = ({cart }) => {
       return {
         ...item,
         quantity: item.quantity || 1, // add a default quantity of 1 if it doesn't exist
-        price: product ? product.price : item.price,
-        photo: product ? product.photo : item.photo // use item.photo if product is undefined
+        price: selectedProduct ? selectedProduct.price : item.price,
+        photo: selectedProduct ? selectedProduct.photo : item.photo // use item.photo if selectedProduct is undefined
       };
     } else {
       return item;
@@ -43,7 +43,7 @@ const CheckBag = ({cart }) => {
   });
 
   const handleAddButtonClick = (index) => {
-    const newCart = [...cartItems]; 
+    const newCart = [...cartItems];
     newCart[index].quantity = newCart[index].quantity ? newCart[index].quantity + 1 : 2; // increase the quantity of the selected product
     setCartItems(newCart);
 
@@ -52,36 +52,36 @@ const CheckBag = ({cart }) => {
     }, 0);
     setTotal(totalPrice.toFixed(2)); // update the total state
   };
-  
+
   const handleSubButtonClick = (index) => {
     const newCart = [...cartItems];
     if (newCart[index].quantity && newCart[index].quantity > 1) {
-      newCart[index].quantity -= 1; 
+      newCart[index].quantity -= 1;
       setCartItems(newCart);
     }
   };
 
   const selectedProducts = updatedCartItems.filter(item => item.id !== parseInt(id));
   useEffect(() => {
-    const totalPrice = cartItems.reduce((acc, item) => {
+    const totalPrice = updatedCartItems.reduce((acc, item) => {
       return acc + item.price * (item.quantity || 1);
     }, 0);
     setTotal(totalPrice.toFixed(2));
-  }, [cartItems]);
+  }, [updatedCartItems]);
 
   return (
     <>
       <div className="cart_container">
         <Navbar />
         <div className="cart_contents">
-            <BackItem />
+          <BackItem />
 
           <h1 className="cart_title">Check Your Bag Items</h1>
           <div>
             {updatedCartItems.map((item, index) => (
               <div key={index} className="check_box">
                 <div className="product_img_container">
-                {selectedProducts.length > 0 && selectedProducts.find(p => p.id === item.id) && (
+                  {selectedProducts.length > 0 && selectedProducts.find(p => p.id === item.id) && (
                     <img className="product_img_cart" src={item.photo} alt={item.productName} onError={(e) => { e.target.src = item.photo }} />
                   )}
                 </div>
@@ -90,12 +90,12 @@ const CheckBag = ({cart }) => {
                   <h3 className="cart_model">{item.productModel}</h3>
                   <p className="cart_description">{item.description}</p>
                   <div className="cart_rating_container">
-                    <img className="cart_rating_stars" src={item.rating} alt="stars"/>
+                    <img className="cart_rating_stars" src={item.rating} alt="stars" />
                     <span className="product_rating"> 4.5 / 5</span>
                   </div>
 
                   <div className="price_container">
-                  <p className="cart_price">$ {Number(item.price * (item.quantity || 1)).toFixed(2)}</p>
+                    <p className="cart_price">$ {Number(item.price * (item.quantity || 1)).toFixed(2)}</p>
                     <button className="btn_addition" onClick={() => handleAddButtonClick(index)}>+</button>
                     <span className="quantity">{item.quantity || 1} </span>
                     <button className="btn_deduction" onClick={() => handleSubButtonClick(index)}>-</button>
@@ -106,24 +106,23 @@ const CheckBag = ({cart }) => {
             ))}
           </div>
         </div>
- 
+
         <div className="cart_view">
-         <div className='checkout_box'> 
-         <Link to="/payment">
-           <button className='checkout_btn'>Checkout</button>
-         </Link>
-           
+          <div className='checkout_box'>
+            <Link to={{ pathname: "/checkout", search: `?total=${total}` }}>
+              <button className='checkout_btn'>Checkout</button>
+            </Link>
             <h3 className="total_item">TOTAL: ${total} </h3>
-        </div>
- 
+          </div>
+
           {cart.map((item, index) => (
             <div key={`${item.id}-${index}`}>
               <img className="product_img" src={item.photo} alt={item.productName} />
             </div>
           ))}
 
-        </div>       
- 
+        </div>
+
       </div>
     </>
   );
